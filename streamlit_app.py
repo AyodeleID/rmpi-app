@@ -21,7 +21,7 @@ st.set_page_config(
 # -----------------
 @st.cache_data
 def load_data():
-    file_path = "/Users/ayodele/Python Projects/RMPI Project/data/processed/master_rmpi_with_mpi.csv"
+    file_path = "data/processed/master_rmpi_with_mpi.csv"  # relative path for GitHub/Streamlit
     df = pd.read_csv(file_path)
     # expected columns: country_name, year, migration_pressure_index
     df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
